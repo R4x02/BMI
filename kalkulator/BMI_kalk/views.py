@@ -23,14 +23,15 @@ class WidokLogowania(View):
 # Widok rejestracji
 def rejestracja(request):
     if request.method == 'POST':
-        formularz = FormularzRejestracji(request.POST)
-        if formularz.is_valid():
-            uzytkownik = formularz.save()
+        formularz_uzytkownika = FormularzRejestracji(request.POST)
+        if formularz_uzytkownika.is_valid():
+            uzytkownik = formularz_uzytkownika.save()
             login(request, uzytkownik)
-            return redirect('strona_glowna')
+            return redirect('strona_glowna')  # Zmieniono na strona_glowna, jeśli to odpowiednia nazwa
     else:
-        formularz = FormularzRejestracji()
-    return render(request, 'rejestracja.html', {'formularz': formularz})
+        formularz_uzytkownika = FormularzRejestracji()
+
+    return render(request, 'rejestracja.html', {'formularz_uzytkownika': formularz_uzytkownika})
 
 @login_required
 def strona_glowna(request):
