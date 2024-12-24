@@ -1,11 +1,9 @@
-{% extends 'baza.html' %}
-
 {% block content %}
-    <h2>Rejestracja</h2>
-    <form method="post">
-        {% csrf_token %}
-        {{ formularz.as_p }}
-        <button type="submit">Zarejestruj się</button>
-    </form>
-    <a href="{% url 'logowanie' %}">Masz już konto? Zaloguj się</a>
+  <h2>Rejestracja</h2>
+  <form method="POST">
+    {% csrf_token %}
+    {{ formularz.as_p }}
+    <button type="submit">Zarejestruj się</button>
+  </form>
+  <p>Masz już konto? <a href="{% url 'logowanie' %}">Zaloguj się</a></p>
 {% endblock %}
