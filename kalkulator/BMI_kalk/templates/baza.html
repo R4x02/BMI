@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kalkulator BMI</title>
+</head>
+<body>
+    <h1>Witamy w Kalkulatorze BMI</h1>
+    <p>To jest strona główna.</p>
+
+    {% if user.is_authenticated %}
+        <p>Witaj, {{ user.username }}! Jesteś zalogowany.</p>
+        <a href="{% url 'wylogowanie' %}">Wyloguj się</a>
+    {% else %}
+        <p>Nie jesteś zalogowany. Możesz:</p>
+        <ul>
+            <li><a href="{% url 'logowanie' %}">Zalogować się</a></li>
+            <li><a href="{% url 'rejestracja' %}">Zarejestrować się</a></li>
+        </ul>
+    {% endif %}
+</body>
+</html>
