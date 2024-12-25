@@ -11,3 +11,12 @@ class FormularzRejestracji(forms.ModelForm):
         widgets = {
             'password': forms.PasswordInput,
         }
+
+class BMIForm(forms.ModelForm):
+    class Meta:
+        model = Profile
+        fields = ['wzrost', 'waga']
+        widgets = {
+            'wzrost': forms.NumberInput(attrs={'step': '0.01'}),
+            'waga': forms.NumberInput(attrs={'step': '0.1'}),
+        }
