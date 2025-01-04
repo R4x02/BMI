@@ -1,5 +1,9 @@
 {% block content %}
-  <h2>Logowanie</h2>
+  <head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'style.css' %}">
+  </head>
+  <h1>Logowanie</h1>
   <form method="POST">
     {% csrf_token %}
     {{ form.as_p }}

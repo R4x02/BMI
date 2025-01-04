@@ -1,0 +1,129 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f9;
+    color: #333;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: #4CAF50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+p {
+    font-size: 1rem;
+    text-align: center;
+}
+
+form {
+    max-width: 600px;
+    margin: 20px auto;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+form button:hover {
+    background-color: #45a049;
+}
+
+form input, form select, form textarea {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #333;
+}
+
+.bmi-info {
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 20px;
+}
+
+.bmi-info p {
+    margin: 10px 0;
+}
+
+.bmi-info .bmi-value {
+    font-size: 2rem;
+    color: #4CAF50;
+    font-weight: bold;
+}
+
+.bmi-info .category {
+    font-size: 1.2rem;
+    color: #333;
+    margin-top: 5px;
+}
+
+.arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: black;
+    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+    top: 50%;
+    left: 100%;
+    transform-origin: center center;
+    transform: translateX(-100%) translateY(-50%);
+    transition: transform 1s ease-in-out;
+    z-index: 10;
+}
+
+.value-display {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+    z-index: 2;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.logout-button {
+    display: block;
+    width: 200px;
+    margin: 20px auto;
+    padding: 10px;
+    background-color: red;
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1.2rem;
+    transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+    background-color: #FF6347;
+}

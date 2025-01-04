@@ -20,8 +20,7 @@ from django.shortcuts import redirect
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('BMI_kalk/', include('BMI_kalk.urls')),
-    path('', lambda request: redirect('BMI_kalk/')),
+    path('', include('BMI_kalk.urls')),
 ]
 
 
