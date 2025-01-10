@@ -20,7 +20,7 @@ class Profile(models.Model):
             if bmi_rounded < 18.5:
                 kategoria = "Niedowaga"
             elif 18.5 <= bmi_rounded < 24.9:
-                kategoria = "Waga prawidłowa"
+                kategoria = "Prawidłowa"
             elif 25 <= bmi_rounded < 29.9:
                 kategoria = "Nadwaga"
             else:

@@ -22,7 +22,7 @@
 
 {% if bmi %}
 <div class="bmi-info">
-    <p class="bmi-value" id="bmiValue" data-bmi="{{ bmi|floatformat:2 }}">Twoje BMI wynosi: {{ bmi|floatformat:2 }}</p>
+    <p class="bmi-value" id="bmiValue" data-bmi="{{ bmi|floatformat:2 }}" data-category="{{ kategoria }}">Twoje BMI wynosi: {{ bmi|floatformat:2 }}</p>
     <p id="category" class="category">Twoja kategoria BMI: {{ kategoria }}</p>
 
     <div class="bmi-gauge-container" width="500" height="200">
@@ -31,7 +31,7 @@
             <circle cx="75" cy="75" r="45" fill="none" stroke="#d9534f" stroke-width="8" stroke-dasharray="50, 210" stroke-dashoffset="0" /> <!-- Czerwony -->
             <circle cx="75" cy="75" r="45" fill="none" stroke="#ffcc00" stroke-width="8" stroke-dasharray="40, 235" stroke-dashoffset="50" /> <!-- Żółty -->
             <circle cx="75" cy="75" r="45" fill="none" stroke="#5cb85c" stroke-width="8" stroke-dasharray="80, 210" stroke-dashoffset="130" /> <!-- Zielony -->
-            <circle cx="75" cy="75" r="45" fill="none" stroke="#f0ad4e" stroke-width="8" stroke-dasharray="50, 210" stroke-dashoffset="150" /> <!-- Pomarańczowy -->
+            <circle cx="75" cy="75" r="45" fill="none" stroke="#00FFFF" stroke-width="8" stroke-dasharray="50, 210" stroke-dashoffset="150" /> <!-- Niebieski -->
 
             <!-- Środek wykresu -->
             <circle cx="75" cy="75" r="30" fill="#fff" stroke="none" /> <!-- Środek (wycięcie) -->
